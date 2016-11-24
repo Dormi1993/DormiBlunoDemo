@@ -86,16 +86,16 @@ public class MainActivity  extends BlunoLibrary {
 	public void onConectionStateChange(connectionStateEnum theConnectionState) {//Once connection state changes, this function will be called
 		switch (theConnectionState) {											//Four connection state
 		case isConnected:
-			buttonScan.setText("Connected");
+			buttonScan.setText("连接成功!!");
 			break;
 		case isConnecting:
-			buttonScan.setText("Connecting");
+			buttonScan.setText("连接中...");
 			break;
 		case isToScan:
-			buttonScan.setText("Scan");
+			buttonScan.setText("扫描设备");
 			break;
 		case isScanning:
-			buttonScan.setText("Scanning");
+			buttonScan.setText("扫描中...");
 			break;
 		case isDisconnecting:
 			buttonScan.setText("isDisconnecting");

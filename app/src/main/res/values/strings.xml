@@ -1,13 +1,13 @@
 <resources>
 
-    <string name="app_name">BlunoBasicDemo</string>
+    <string name="app_name">FDoctor</string>
     <string name="ble_not_supported">BLE is not supported</string>
     <string name="label_data">Data:</string>
     <string name="label_device_address">Device address:</string>
     <string name="label_state">State:</string>
     <string name="no_data">No data</string>
-    <string name="connected">Connected</string>
-    <string name="disconnected">Disconnected</string>
+    <string name="connected">连接成功</string>
+    <string name="disconnected">连接失败</string>
     <string name="title_devices">BLE Device Scan</string>
     <string name="error_bluetooth_not_supported">Bluetooth not supported.</string>
     <string name="unknown_device">Unknown device</string>
@@ -15,9 +15,15 @@
     <string name="unknown_service">Unknown service</string>
 
     <!-- Menu items -->
-    <string name="menu_connect">Connect</string>
-    <string name="menu_disconnect">Disconnect</string>
-    <string name="menu_scan">Scan</string>
-    <string name="menu_stop">Stop</string>
+    <string name="menu_connect">连接成功</string>
+    <string name="menu_disconnect">连接失败</string>
+    <string name="menu_scan">扫描</string>
+    <string name="menu_stop">停止</string>
     <string name="action_settings">Action settings</string>
+
+    <string name="title">FDoctor血液检测</string>
+    <string name="app_version">版本1.0</string>
+    <string name="app_info">功能：此版本完成发送接收单个字符</string>
+    <string name="copyright">上海交通大学机器人所 瑞鹏机器人公司 联合出品</string>
+
 </resources>
