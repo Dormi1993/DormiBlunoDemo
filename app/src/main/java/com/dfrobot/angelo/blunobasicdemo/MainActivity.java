@@ -5,20 +5,25 @@ import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
+import com.dfrobot.angelo.blunobasicdemo.serverLogin.ServerLogin;
 
 public class MainActivity  extends BlunoLibrary {
 	private Button buttonScan;
 	private Button buttonSerialSend;
 	private EditText serialSendText;
 	private TextView serialReceivedText;
+	private Button buttonTOServer;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_main);
         onCreateProcess();														//onCreate Process by BlunoLibrary
 
@@ -47,6 +52,15 @@ public class MainActivity  extends BlunoLibrary {
 				// TODO Auto-generated method stub
 
 				buttonScanOnClickProcess();										//Alert Dialog for selecting the BLE device
+			}
+		});
+
+		buttonTOServer = (Button) findViewById(R.id.sendtoServe);
+		buttonTOServer.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(MainActivity.this, ServerLogin.class);
+				startActivity(intent);
 			}
 		});
 	}
@@ -112,5 +126,7 @@ public class MainActivity  extends BlunoLibrary {
 		//The Serial data from the BLUNO may be sub-packaged, so using a buffer to hold the String is a good choice.
 		((ScrollView)serialReceivedText.getParent()).fullScroll(View.FOCUS_DOWN);
 	}
+
+
 
 }

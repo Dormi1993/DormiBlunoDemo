@@ -19,7 +19,7 @@ public class LoginActivity extends Activity{
     public void onCreate(Bundle savedInstanceState) {
 //		requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login);
+        setContentView(R.layout.initial_login);
 
 //		Intent intent = new Intent();
 //		intent.setClass(LoginActivity.this, PeripheralActivity.class);
